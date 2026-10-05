@@ -1,805 +1,501 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dinas Perikanan Kabupaten Lembata - Bidang Perikanan Tangkap</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinas Perikanan Kabupaten Lembata - Bidang Perikanan Tangkap</title>
 
-<style>
-:root{
-  --blue:#075985;
-  --blue-dark:#063b57;
-  --blue-light:#e0f2fe;
-  --green:#15803d;
-  --green-light:#dcfce7;
-  --white:#ffffff;
-  --text:#163247;
-  --muted:#587184;
-  --line:#dbeafe;
-  --bg:#f4fbff;
-}
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Dinas Perikanan Kabupaten Lembata - Bidang Perikanan Tangkap">
+  <meta name="description"
+    content="Portal informasi resmi layanan nelayan dan pelaku usaha perikanan Dinas Perikanan Kabupaten Lembata, meliputi persyaratan dan alur pelayanan e-KUSUKA serta rekomendasi Barcode BBM Nelayan.">
+  <meta name="keywords"
+    content="Dinas Perikanan Lembata, Bidang Perikanan Tangkap, e-KUSUKA, Barcode BBM Nelayan, Rekomendasi BBM Nelayan, BPH Migas Lembata, Nelayan Lembata, Lewoleba, NTT">
+  <meta name="author" content="Dinas Perikanan Kabupaten Lembata">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#075985">
 
-*{box-sizing:border-box}
+  <!-- Favicon & App Icons -->
+  <link rel="icon" type="image/webp" href="assets/brand-logo.webp">
+  <link rel="apple-touch-icon" href="assets/brand-logo.webp">
 
-html{scroll-behavior:smooth}
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diskan.lembata.site">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="Dinas Perikanan Kabupaten Lembata">
+  <meta property="og:title" content="Dinas Perikanan Kabupaten Lembata - Bidang Perikanan Tangkap">
+  <meta property="og:description"
+    content="Portal informasi resmi layanan nelayan dan pelaku usaha perikanan Dinas Perikanan Kabupaten Lembata: e-KUSUKA dan Rekomendasi Barcode BBM Nelayan.">
+  <meta property="og:image" content="https://diskan.lembata.site/assets/og-logo.png">
+  <meta property="og:image:secure_url" content="https://diskan.lembata.site/assets/og-logo.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="315">
 
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  color:var(--text);
-  background:linear-gradient(180deg,#f5fcff 0%,#ffffff 55%,#f0fdf4 100%);
-  line-height:1.6;
-}
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://diskan.lembata.site">
+  <meta name="twitter:title" content="Dinas Perikanan Kabupaten Lembata - Bidang Perikanan Tangkap">
+  <meta name="twitter:description"
+    content="Portal informasi resmi layanan nelayan dan pelaku usaha perikanan Dinas Perikanan Kabupaten Lembata: e-KUSUKA dan Rekomendasi Barcode BBM Nelayan.">
+  <meta name="twitter:image" content="https://diskan.lembata.site/assets/og-logo.png">
 
-/* HEADER */
-header{
-  background:#fff;
-  border-bottom:1px solid var(--line);
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 2px 10px rgba(6,59,87,.08);
-}
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://diskan.lembata.site">
 
-.nav{
-  max-width:1120px;
-  margin:auto;
-  padding:14px 22px;
-  display:flex;
-  align-items:center;
-  gap:18px;
-}
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-.logo{
-  width:88px;
-  height:88px;
-  object-fit:contain;
-  flex-shrink:0;
-}
-
-.brand{
-  display:block;
-}
-
-.brand > span:first-child{
-  display:block;
-  color:#075985;
-  font-size:27px;
-  font-weight:700;
-  line-height:1.2;
-}
-
-.brand > span:last-child{
-  display:block;
-  color:#587184;
-  font-size:22px;
-  font-weight:600;
-  margin-top:8px;
-}
-/* HERO */
-.hero{
-  max-width:1120px;
-  margin:auto;
-  padding:48px 22px 30px;
-}
-
-.hero h1{
-  margin:0 0 10px;
-  color:var(--blue);
-  font-size:clamp(32px,5vw,52px);
-  line-height:1.08;
-}
-
-.hero p{
-  max-width:760px;
-  margin:0;
-  color:var(--muted);
-  font-size:18px;
-}
-
-/* SERVICE CARDS */
-.section{
-  max-width:1120px;
-  margin:auto;
-  padding:22px 22px 48px;
-}
-
-.section-title{
-  margin-bottom:20px;
-}
-
-.section-title h2{
-  margin:0;
-  color:var(--blue);
-  font-size:30px;
-}
-
-.section-title p{
-  margin:5px 0 0;
-  color:var(--muted);
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.card{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:24px;
-  box-shadow:0 10px 28px rgba(7,89,133,.07);
-}
-
-.card .num{
-  width:38px;
-  height:38px;
-  border-radius:12px;
-  background:var(--blue-light);
-  color:var(--blue);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:800;
-  margin-bottom:14px;
-}
-
-.card h3{
-  margin:0 0 8px;
-  color:#0f4c6e;
-  font-size:20px;
-}
-
-.card p{
-  margin:0 0 16px;
-  color:var(--muted);
-  font-size:14px;
-}
-
-.btn{
-  display:inline-block;
-  text-decoration:none;
-  background:var(--blue);
-  color:#fff;
-  padding:10px 15px;
-  border-radius:10px;
-  font-weight:700;
-  font-size:14px;
-}
-
-/* WAKTU + INFORMASI */
-.info-section{
-  max-width:1120px;
-  margin:auto;
-  padding:10px 22px 55px;
-}
-
-.info{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-.panel{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:34px 38px;
-  box-shadow:0 10px 25px rgba(7,89,133,.06);
-}
-
-.panel h3{
-  margin:0 0 28px;
-  color:var(--blue);
-  font-size:28px;
-}
-
-.schedule-row{
-  display:grid;
-  grid-template-columns:1fr 1.15fr;
-  gap:20px;
-  padding:19px 0;
-  border-bottom:1px solid var(--line);
-}
-
-.schedule-row:last-child{
-  border-bottom:0;
-}
-
-.schedule-row b{
-  color:#075985;
-  font-size:17px;
-}
-
-.schedule-row span{
-  color:#163247;
-  font-size:17px;
-}
-
-.schedule-time{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-.check-list{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.check-list li{
-  position:relative;
-  padding:0 0 20px 35px;
-  color:#163247;
-  font-size:17px;
-}
-
-.check-list li:last-child{
-  padding-bottom:0;
-}
-
-.check-list li::before{
-  content:"✓";
-  position:absolute;
-  left:0;
-  top:-2px;
-  color:var(--green);
-  font-size:24px;
-  font-weight:800;
-}
-
-/* SERVICE DETAILS */
-.service-page{
-  max-width:1120px;
-  margin:auto;
-  padding:30px 22px 55px;
-  scroll-margin-top:20px;
-}
-
-.service-head{
-  background:linear-gradient(135deg,#075985,#0e7490);
-  color:#fff;
-  border-radius:20px;
-  padding:28px 30px;
-}
-
-.service-head h2{
-  margin:0 0 5px;
-  font-size:29px;
-}
-
-.service-head p{
-  margin:0;
-  opacity:.92;
-}
-
-.content-grid{
-  display:grid;
-  grid-template-columns:1fr 1.15fr;
-  gap:20px;
-  margin-top:20px;
-}
-
-.content-box{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:25px;
-  box-shadow:0 8px 22px rgba(7,89,133,.05);
-}
-
-.content-box h3{
-  margin:0 0 15px;
-  color:var(--blue);
-  font-size:23px;
-}
-
-.req{
-  padding-left:22px;
-  margin:0;
-}
-
-.req li{
-  padding:7px 0;
-}
-
-.flow{
-  display:grid;
-  gap:14px;
-}
-
-.step{
-  display:grid;
-  grid-template-columns:42px 1fr;
-  gap:13px;
-  align-items:start;
-}
-
-.step-no{
-  width:38px;
-  height:38px;
-  border-radius:12px;
-  background:var(--green-light);
-  color:#166534;
-  font-weight:800;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.step strong{
-  display:block;
-  color:#0f4c6e;
-  margin-bottom:2px;
-}
-
-.step span{
-  color:var(--muted);
-  font-size:14px;
-}
-
-/* FOOTER */
-footer{
-  background:var(--blue-dark);
-  color:#dbeafe;
-  padding:42px 22px;
-  margin-top:10px;
-}
-
-.footer-inner{
-  max-width:1120px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.6fr 1fr;
-  gap:30px;
-  align-items:center;
-}
-
-.footer-brand{
-  border-left:3px solid #38bdf8;
-  padding-left:20px;
-}
-
-.footer-brand strong{
-  color:#fff;
-  font-size:22px;
-}
-
-.footer-brand span{
-  display:block;
-  color:#dbeafe;
-  font-size:18px;
-  margin-top:3px;
-}
-
-.contact{
-  display:grid;
-  gap:12px;
-  margin-top:18px;
-}
-
-.contact div{
-  font-size:16px;
-}
-
-.contact a{
-  color:#fff;
-  text-decoration:none;
-}
-
-.whatsapp{
-  border-left:1px solid rgba(255,255,255,.45);
-  padding-left:30px;
-}
-
-.whatsapp-title{
-  color:#dbeafe;
-  font-size:16px;
-  margin-bottom:3px;
-}
-
-.whatsapp-number{
-  color:#fff;
-  font-size:25px;
-  font-weight:800;
-  text-decoration:none;
-}
-
-/* RESPONSIVE */
-@media(max-width:850px){
-  .cards,
-  .info,
-  .content-grid,
-  .footer-inner{
-    grid-template-columns:1fr;
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "GovernmentOrganization",
+        "@id": "https://diskan.lembata.site/#organization",
+        "name": "Dinas Perikanan Kabupaten Lembata - Bidang Perikanan Tangkap",
+        "url": "https://diskan.lembata.site/",
+        "logo": "https://diskan.lembata.site/assets/logo-lembata.webp",
+        "image": "https://diskan.lembata.site/assets/og-logo.png",
+        "telephone": "+6281337731476",
+        "email": "diskan@lembatakab.go.id",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Trans Lembata, Kelurahan Lewoleba Tengah",
+          "addressLocality": "Kecamatan Nubatukan, Kabupaten Lembata",
+          "addressRegion": "Nusa Tenggara Timur",
+          "addressCountry": "ID"
+        }
+      },
+      {
+        "@type": "GovernmentService",
+        "name": "Layanan e-KUSUKA dan Rekomendasi Barcode BBM Nelayan",
+        "provider": {
+          "@id": "https://diskan.lembata.site/#organization"
+        },
+        "serviceType": "Pelayanan Publik Perikanan Tangkap",
+        "areaServed": "Kabupaten Lembata"
+      }
+    ]
   }
+  </script>
 
-  .nav{
-    padding:12px 16px;
-  }
-
-  .logo{
-    width:68px;
-    height:68px;
-  }
-
-  .brand strong{
-    font-size:19px;
-  }
-
- .brand > span{
-    font-size:11px;
-}
-
-  .badge{
-  display:inline-block;
-  padding:9px 18px;
-  border-radius:999px;
-  background:#dcfce7 !important;
-  color:#15803d !important;
-  font-size:14px;
-  font-weight:700;
-  letter-spacing:.8px;
-}
-
-.hero{
-    padding-top:35px;
-  }
-
-  .panel{
-    padding:26px;
-  }
-
-  .whatsapp{
-    border-left:0;
-    border-top:1px solid rgba(255,255,255,.35);
-    padding-left:0;
-    padding-top:20px;
-  }
-}
-
-@media(max-width:560px){
-  .brand strong{
-    font-size:15px;
-  }
-
-  .brand span{
-    font-size:12px;
-  }
-
-  .logo{
-    width:58px;
-    height:58px;
-  }
-
-  .hero h1{
-    font-size:34px;
-  }
-
-  .schedule-row{
-    grid-template-columns:1fr;
-    gap:6px;
-  }
-}
-</style>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 
-<header>
-  <div class="nav">
+  <header>
+    <div class="nav">
 
-    <!-- LOGO DINAS -->
-   <img class="logo" src="logo.png" alt="Logo Dinas Perikanan Kabupaten Lembata">
+      <!-- LOGO DINAS -->
+      <img class="logo logo-lembata" src="assets/logo-lembata.webp" alt="Logo Kabupaten Lembata">
 
-    <!-- TULISAN -->
-    <div class="brand">
-      <span>DINAS PERIKANAN KABUPATEN LEMBATA</span>
-      <span>BIDANG PERIKANAN TANGKAP</span>
-    </div>
-
-  </div>
-</header>
-
-<main>
-
-<section class="hero">
-  <span class="badge">LAYANAN INFORMASI</span>
-  <h1>BIDANG PERIKANAN TANGKAP</h1>
-  <p>
-  Layanan Informasi bagi Nelayan dan Pelaku Usaha Perikanan, Meliputi Layanan e-KUSUKA
-  serta Rekomendasi Barcode BBM Nelayan
-</p>
-</section>
-
-<section class="section">
-  <div class="section-title">
-    <h2>Layanan Utama</h2>
-    <p>Pilih layanan untuk melihat persyaratan dan alur pelayanan</p>
-  </div>
-
-  <div class="cards">
-
-    <div class="card">
-      <div class="num">01</div>
-      <h3>e-KUSUKA</h3>
-      <p>Informasi persyaratan dan alur pelayanan e-KUSUKA</p>
-      <a class="btn" href="#ekusuka">Lihat layanan</a>
-    </div>
-
-    <div class="card">
-      <div class="num">02</div>
-      <h3>Penerbitan Barcode BBM Nelayan</h3>
-      <p>Informasi persyaratan dan alur penerbitan rekomendasi Barcode BBM Nelayan</p>
-      <a class="btn" href="#bbm-terbit">Lihat layanan</a>
-    </div>
-
-    <div class="card">
-      <div class="num">03</div>
-      <h3>Perpanjangan Barcode BBM Nelayan</h3>
-      <p>Informasi persyaratan dan alur perpanjangan rekomendasi Barcode BBM Nelayan</p>
-      <a class="btn" href="#bbm-perpanjang">Lihat layanan</a>
-    </div>
-
-  </div>
-</section>
-
-<section class="info-section">
-  <div class="info">
-
-    <div class="panel">
-      <h3>Waktu Pelayanan</h3>
-
-      <div class="schedule-row">
-        <b>Hari Kerja</b>
-        <span>Senin – Kamis</span>
+      <!-- TULISAN -->
+      <div class="brand">
+        <span>DINAS PERIKANAN KABUPATEN LEMBATA</span>
+        <span>BIDANG PERIKANAN TANGKAP</span>
       </div>
 
-      <div class="schedule-row">
-        <b>Waktu Pelayanan</b>
-        <div class="schedule-time">
-          <span>08.00 – 11.30 WITA</span>
-          <span>12.30 – 14.30 WITA</span>
+      <!-- LOGO BRAND / BIDANG -->
+      <img class="logo logo-brand" src="assets/brand-logo.webp" alt="Logo Brand Bidang Perikanan Tangkap">
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <span class="badge">LAYANAN INFORMASI</span>
+      <h1>BIDANG PERIKANAN TANGKAP</h1>
+      <p>
+        Layanan Informasi bagi Nelayan dan Pelaku Usaha Perikanan, Meliputi Layanan e-KUSUKA
+        serta Rekomendasi Barcode BBM Nelayan
+      </p>
+    </section>
+
+    <section class="section" id="layanan">
+      <div class="section-title">
+        <h2>Layanan Utama</h2>
+        <p>Pilih layanan untuk melihat persyaratan dan alur pelayanan</p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="num">01</div>
+          <h3>e-KUSUKA</h3>
+          <p>Informasi persyaratan dan alur pelayanan e-KUSUKA</p>
+          <a class="btn" href="#ekusuka">Lihat layanan</a>
+        </div>
+
+        <div class="card">
+          <div class="num">02</div>
+          <h3>Penerbitan Barcode BBM Nelayan</h3>
+          <p>Informasi persyaratan dan alur penerbitan rekomendasi Barcode BBM Nelayan</p>
+          <a class="btn" href="#bbm-terbit">Lihat layanan</a>
+        </div>
+
+        <div class="card">
+          <div class="num">03</div>
+          <h3>Perpanjangan Barcode BBM Nelayan</h3>
+          <p>Informasi persyaratan dan alur perpanjangan rekomendasi Barcode BBM Nelayan</p>
+          <a class="btn" href="#bbm-perpanjang">Lihat layanan</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="info">
+
+        <div class="panel">
+          <h3>Waktu Pelayanan</h3>
+
+          <div class="schedule-row">
+            <b>Hari Kerja</b>
+            <span>Senin – Kamis</span>
+          </div>
+
+          <div class="schedule-row">
+            <b>Waktu Pelayanan</b>
+            <div class="schedule-time">
+              <span>08.00 – 11.30 WITA</span>
+              <span>12.30 – 14.30 WITA</span>
+            </div>
+          </div>
+
+          <div class="schedule-row">
+            <b>Istirahat</b>
+            <span>11.30 – 12.30 WITA</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Informasi Sebelum Datang</h3>
+
+          <ul class="check-list">
+            <li>Siapkan persyaratan sesuai jenis layanan yang akan diajukan</li>
+            <li>Pastikan fotokopi KTP dan KK masih terbaca dengan jelas</li>
+            <li>Bawa dokumen kapal atau surat keterangan usaha</li>
+            <li>Datang pada hari kerja (Senin–Kamis) sesuai jam pelayanan</li>
+            <li>Periksa kembali kelengkapan dokumen sebelum menyerahkan berkas</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="service-page" id="ekusuka">
+      <div class="service-head">
+        <h2>e-KUSUKA</h2>
+        <p>Persyaratan dan alur pelayanan e-KUSUKA</p>
+      </div>
+
+      <div class="content-grid">
+
+        <div class="content-box">
+          <h3>Persyaratan</h3>
+          <ol class="req">
+            <li>Permohonan</li>
+            <li>Fotocopy KTP</li>
+            <li>Fotocopy KK</li>
+            <li>Dokumen Kapal/Surat Keterangan dari Desa/Lurah/Camat yang menerangkan jenis usaha</li>
+          </ol>
+        </div>
+
+        <div class="content-box">
+          <h3>Alur Pelayanan</h3>
+
+          <div class="flow">
+            <div class="step">
+              <div class="step-no">1</div>
+              <div><strong>Pemohon</strong><span>Mengajukan formulir dan persyaratan ke Bidang Perikanan Tangkap</span>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">2</div>
+              <div><strong>Administrasi Umum</strong><span>Menerima dan memeriksa kelengkapan dokumen</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">3</div>
+              <div><strong>Analis Kenelayanan</strong><span>Melakukan verifikasi substansi permohonan</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">4</div>
+              <div><strong>P3T Ahli Pertama</strong><span>Melakukan verifikasi teknis dan memberikan persetujuan
+                  (paraf)</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">5</div>
+              <div><strong>Pengelola Data</strong><span>Menginput data ke Aplikasi KUSUKA dan mencetak Kartu
+                  e-KUSUKA</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">6</div>
+              <div><strong>Administrasi Umum</strong><span>Membuat tanda terima </span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">7</div>
+              <div>
+                <strong>Penyerahan</strong>
+                <span>Penyerahan kartu e-KUSUKA kepada pemohon</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="back-link-wrapper">
+            <a class="back-link" href="#layanan">
+              <span class="back-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 19V5M5 12l7-7 7 7"/>
+                </svg>
+              </span>
+              <span>Kembali ke Pilihan Layanan</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-page" id="bbm-terbit">
+      <div class="service-head">
+        <h2>Penerbitan Rekomendasi Barcode BBM Nelayan</h2>
+        <p>Persyaratan dan alur pelayanan penerbitan rekomendasi Barcode BBM Nelayan</p>
+      </div>
+
+      <div class="content-grid">
+
+        <div class="content-box">
+          <h3>Persyaratan</h3>
+          <ol class="req">
+            <li>Permohonan</li>
+            <li>Fotocopy KTP</li>
+            <li>Fotocopy KK</li>
+            <li>Dokumen Kapal/Surat Keterangan dari Desa/Lurah/Camat yang menerangkan jenis usaha</li>
+            <li>Foto kapal</li>
+          </ol>
+        </div>
+
+        <div class="content-box">
+          <h3>Alur Pelayanan</h3>
+
+          <div class="flow">
+            <div class="step">
+              <div class="step-no">1</div>
+              <div><strong>Pemohon</strong><span>Mengajukan formulir dan persyaratan</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">2</div>
+              <div><strong>Administrasi Umum</strong><span>Menerima dan memeriksa kelengkapan dokumen</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">3</div>
+              <div><strong>P3T Ahli Pertama</strong><span>Melakukan verifikasi substansi dan persetujuan teknis</span>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">4</div>
+              <div><strong>Pengelola Data</strong><span>Menginput data ke Aplikasi X-Star BPH Migas dan mencetak surat
+                  rekomendasi</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">5</div>
+              <div><strong>Kepala Bidang</strong><span>Memeriksa dan menandatangani surat rekomendasi</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">6</div>
+              <div><strong>Administrasi Umum</strong><span>Membuat tanda terima</span></div>
+            </div>
+            <div class="step">
+              <div class="step-no">7</div>
+              <div>
+                <strong>Penyerahan</strong>
+                <span>Penyerahan surat rekomendasi barcode BBM ke pemohon</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="back-link-wrapper">
+            <a class="back-link" href="#layanan">
+              <span class="back-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 19V5M5 12l7-7 7 7"/>
+                </svg>
+              </span>
+              <span>Kembali ke Pilihan Layanan</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-page" id="bbm-perpanjang">
+      <div class="service-head">
+        <h2>Perpanjangan Rekomendasi Barcode BBM Nelayan</h2>
+        <p>Persyaratan dan alur pelayanan perpanjangan rekomendasi Barcode BBM Nelayan</p>
+      </div>
+
+      <div class="content-grid">
+
+        <div class="content-box">
+          <h3>Persyaratan</h3>
+          <ol class="req">
+            <li>KTP/KK</li>
+            <li>Surat Barcode BBM Yang Lama</li>
+          </ol>
+        </div>
+
+        <div class="content-box">
+          <h3>Alur Pelayanan</h3>
+
+          <div class="flow">
+            <div class="step">
+              <div class="step-no">1</div>
+              <div><strong>Pemohon</strong><span>Mengajukan permohonan perpanjangan paling lambat 5 hari sebelum masa
+                  berlaku berakhir dengan membawa surat Barcode BBM lama</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">2</div>
+              <div><strong>Administrasi Umum</strong><span>Menerima dan memeriksa kelengkapan dokumen</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">3</div>
+              <div><strong>P3T Ahli Pertama</strong><span>Melakukan verifikasi permohonan perpanjangan</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">4</div>
+              <div><strong>Pengelola Data</strong><span>Menginput data ke Aplikasi X-Star BPH Migas dan mencetak surat
+                  perpanjangan</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">5</div>
+              <div><strong>Kepala Bidang</strong><span>Memeriksa dan menandatangani surat perpanjangan</span></div>
+            </div>
+
+            <div class="step">
+              <div class="step-no">6</div>
+              <div><strong>Administrasi Umum</strong><span>Membuat tanda terima </span></div>
+            </div>
+            <div class="step">
+              <div class="step-no">7</div>
+              <div>
+                <strong>Penyerahan</strong>
+                <span>Menyerahkan surat perpanjangan barcode BBM kepada pemohon</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="back-link-wrapper">
+            <a class="back-link" href="#layanan">
+              <span class="back-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 19V5M5 12l7-7 7 7"/>
+                </svg>
+              </span>
+              <span>Kembali ke Pilihan Layanan</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+
+      <div>
+        <div class="footer-brand">
+          <strong>DINAS PERIKANAN KABUPATEN LEMBATA</strong>
+          <span>Bidang Perikanan Tangkap</span>
+
+          <div class="contact">
+            <div>📍 Jl. Trans Lembata, Kelurahan Lewoleba Tengah, Kecamatan Nubatukan</div>
+            <div>✉ <a href="mailto:diskan@lembatakab.go.id">diskan@lembatakab.go.id</a></div>
+          </div>
         </div>
       </div>
 
-      <div class="schedule-row">
-        <b>Istirahat</b>
-        <span>11.30 – 12.30 WITA</span>
+      <div class="whatsapp">
+        <div class="whatsapp-title">Kontak WhatsApp</div>
+        <a class="whatsapp-number" href="https://wa.me/6281337731476" target="_blank" rel="noopener">
+          081337731476
+        </a>
       </div>
+
     </div>
+  </footer>
 
-    <div class="panel">
-      <h3>Informasi Sebelum Datang</h3>
-
-      <ul class="check-list">
-        <li>Siapkan persyaratan sesuai jenis layanan yang akan diajukan</li>
-        <li>Pastikan fotokopi KTP dan KK masih terbaca dengan jelas</li>
-        <li>Bawa dokumen kapal atau surat keterangan usaha</li>
-        <li>Datang pada hari kerja (Senin–Kamis) sesuai jam pelayanan</li>
-        <li>Periksa kembali kelengkapan dokumen sebelum menyerahkan berkas</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<section class="service-page" id="ekusuka">
-  <div class="service-head">
-    <h2>e-KUSUKA</h2>
-    <p>Persyaratan dan alur pelayanan e-KUSUKA</p>
+  <!-- Floating Action Buttons -->
+  <div class="floating-actions">
+    <button class="back-to-top" id="backToTopBtn" aria-label="Kembali ke atas" title="Kembali ke atas">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+    </button>
+    <a class="floating-whatsapp" href="https://wa.me/6281337731476?text=Halo%20Dinas%20Perikanan%20Lembata,%20saya%20ingin%20bertanya%20mengenai%20layanan" target="_blank" rel="noopener" aria-label="Tanya Layanan via WhatsApp">
+      <svg viewBox="0 0 24 24">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.78 14.07c-.24.68-1.39 1.3-1.92 1.38-.49.07-1.12.1-3.23-.77-2.69-1.12-4.43-3.83-4.57-4.01-.13-.18-1.1-1.46-1.1-2.79 0-1.33.69-1.98.94-2.25.25-.26.54-.33.72-.33.18 0 .36 0 .52.01.17.01.4.06.61.53.22.49.75 1.83.82 1.96.07.13.12.29.02.47-.09.18-.14.29-.27.45-.14.16-.29.35-.41.47-.14.13-.28.28-.12.56.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.69-.8.87-1.07.18-.27.37-.22.61-.13.25.09 1.57.74 1.84.87.27.13.45.2.52.31.07.11.07.64-.17 1.32z"/>
+      </svg>
+      <span>Tanya Layanan via WA</span>
+    </a>
   </div>
 
-  <div class="content-grid">
+  <script>
+    const header = document.querySelector('header');
+    const backToTopBtn = document.getElementById('backToTopBtn');
 
-    <div class="content-box">
-      <h3>Persyaratan</h3>
-      <ol class="req">
-        <li>Permohonan</li>
-        <li>Fotocopy KTP</li>
-        <li>Fotocopy KK</li>
-        <li>Dokumen Kapal/Surat Keterangan dari Desa/Lurah/Camat yang menerangkan jenis usaha</li>
-      </ol>
-    </div>
+    function handleScroll() {
+      const scrollPos = window.scrollY || document.documentElement.scrollTop;
+      
+      // Navbar blur effect
+      if (scrollPos > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
 
-    <div class="content-box">
-      <h3>Alur Pelayanan</h3>
+      // Back to top button visibility
+      if (scrollPos > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
 
-      <div class="flow">
-        <div class="step">
-          <div class="step-no">1</div>
-          <div><strong>Pemohon</strong><span>Mengajukan formulir dan persyaratan ke Bidang Perikanan Tangkap</span></div>
-        </div>
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
-        <div class="step">
-          <div class="step-no">2</div>
-          <div><strong>Administrasi Umum</strong><span>Menerima dan memeriksa kelengkapan dokumen</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">3</div>
-          <div><strong>Analis Kenelayanan</strong><span>Melakukan verifikasi substansi permohonan</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">4</div>
-          <div><strong>P3T Ahli Pertama</strong><span>Melakukan verifikasi teknis dan memberikan persetujuan (paraf)</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">5</div>
-          <div><strong>Pengelola Data</strong><span>Menginput data ke Aplikasi KUSUKA dan mencetak Kartu e-KUSUKA</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">6</div>
-          <div><strong>Administrasi Umum</strong><span>Membuat tanda terima </span></div>
-        </div>
-        
-        <div class="step">
-  <div class="step-no">7</div>
-  <div>
-    <strong>Penyerahan</strong>
-    <span>Penyerahan kartu e-KUSUKA kepada pemohon</span>
-  </div>
-</div>
-
-  </div>
-</section>
-
-<section class="service-page" id="bbm-terbit">
-  <div class="service-head">
-    <h2>Penerbitan Rekomendasi Barcode BBM Nelayan</h2>
-    <p>Persyaratan dan alur pelayanan penerbitan rekomendasi Barcode BBM Nelayan</p>
-  </div>
-
-  <div class="content-grid">
-
-    <div class="content-box">
-      <h3>Persyaratan</h3>
-      <ol class="req">
-        <li>Permohonan</li>
-        <li>Fotocopy KTP</li>
-        <li>Fotocopy KK</li>
-        <li>Dokumen Kapal/Surat Keterangan dari Desa/Lurah/Camat yang menerangkan jenis usaha</li>
-        <li>Foto kapal</li>
-      </ol>
-    </div>
-
-    <div class="content-box">
-      <h3>Alur Pelayanan</h3>
-
-      <div class="flow">
-        <div class="step">
-          <div class="step-no">1</div>
-          <div><strong>Pemohon</strong><span>Mengajukan formulir dan persyaratan</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">2</div>
-          <div><strong>Administrasi Umum</strong><span>Menerima dan memeriksa kelengkapan dokumen</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">3</div>
-          <div><strong>P3T Ahli Pertama</strong><span>Melakukan verifikasi substansi dan persetujuan teknis</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">4</div>
-          <div><strong>Pengelola Data</strong><span>Menginput data ke Aplikasi X-Star BPH Migas dan mencetak surat rekomendasi</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">5</div>
-          <div><strong>Kepala Bidang</strong><span>Memeriksa dan menandatangani surat rekomendasi</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">6</div>
-          <div><strong>Administrasi Umum</strong><span>Membuat tanda terima</span></div>
-        </div>
-      <div class="step">
-  <div class="step-no">7</div>
-  <div>
-    <strong>Penyerahan</strong>
-    <span>Penyerahan surat rekomendasi barcode BBM ke pemohon</span>
-  </div>
-</div>
-
-  </div>
-</section>
-
-<section class="service-page" id="bbm-perpanjang">
-  <div class="service-head">
-    <h2>Perpanjangan Rekomendasi Barcode BBM Nelayan</h2>
-    <p>Persyaratan dan alur pelayanan perpanjangan rekomendasi Barcode BBM Nelayan</p>
-  </div>
-
-  <div class="content-grid">
-
-    <div class="content-box">
-      <h3>Persyaratan</h3>
-      <ol class="req">
-        <li>KTP/KK</li>
-        <li>Surat Barcode BBM Yang Lama</li>
-      </ol>
-    </div>
-
-    <div class="content-box">
-      <h3>Alur Pelayanan</h3>
-
-      <div class="flow">
-        <div class="step">
-          <div class="step-no">1</div>
-          <div><strong>Pemohon</strong><span>Mengajukan permohonan perpanjangan paling lambat 5 hari sebelum masa berlaku berakhir dengan membawa surat Barcode BBM lama</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">2</div>
-          <div><strong>Administrasi Umum</strong><span>Menerima dan memeriksa kelengkapan dokumen</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">3</div>
-          <div><strong>P3T Ahli Pertama</strong><span>Melakukan verifikasi permohonan perpanjangan</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">4</div>
-          <div><strong>Pengelola Data</strong><span>Menginput data ke Aplikasi X-Star BPH Migas dan mencetak surat perpanjangan</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">5</div>
-          <div><strong>Kepala Bidang</strong><span>Memeriksa dan menandatangani surat perpanjangan</span></div>
-        </div>
-
-        <div class="step">
-          <div class="step-no">6</div>
-          <div><strong>Administrasi Umum</strong><span>Membuat tanda terima </span></div>
-        </div>
-      <div class="step">
-  <div class="step-no">7</div>
-  <div>
-    <strong>Penyerahan</strong>
-    <span>Menyerahkan surat perpanjangan barcode BBM kepada pemohon</span>
-  </div>
-</div>
-
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="footer-inner">
-
-    <div>
-      <div class="footer-brand">
-        <strong>DINAS PERIKANAN KABUPATEN LEMBATA</strong>
-        <span>Bidang Perikanan Tangkap</span>
-
-        <div class="contact">
-          <div>📍 Jl. Trans Lembata, Kelurahan Lewoleba Tengah, Kecamatan Nubatukan</div>
-          <div>✉ <a href="mailto:diskan@lembatakab.go.id">diskan@lembatakab.go.id</a></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="whatsapp">
-      <div class="whatsapp-title">Kontak WhatsApp</div>
-      <a class="whatsapp-number" href="https://wa.me/6281337731476" target="_blank" rel="noopener">
-        081337731476
-      </a>
-    </div>
-
-  </div>
-</footer>
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  </script>
 
 </body>
+
 </html>
